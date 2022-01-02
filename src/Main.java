@@ -47,6 +47,7 @@ public class Main {
 
         createStats(gsb);
         createStats(gsa);
+        createStats(gsa2);
 
     }
 

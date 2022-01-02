@@ -23,6 +23,7 @@ public class GrapheSolverAlgo2 implements GrapheSolver {
             if(no.color.equals(Color.ROUGE)){
                 nodesRouges.add(no);
                 flechesEntrantes.put(no,0);
+                flechesSortante.put(no,0);
             }
         }
         for(Edge e : graphe.edges){
