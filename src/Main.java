@@ -27,6 +27,7 @@ public class Main {
         GrapheGenerator generator = new RandomLinearGrapheGenerator(0.5f, 0.5f);
         Graphe graphe = generator.generateGraphe();
         System.out.println(graphe);
+
     }
 
 }

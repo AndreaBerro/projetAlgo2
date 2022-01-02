@@ -11,4 +11,6 @@ public class Edge {
         this.color = color;
     }
 
+    public Edge() {
+    }
 }

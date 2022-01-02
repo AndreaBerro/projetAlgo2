@@ -6,8 +6,10 @@ import grapheelement.Graphe;
 import grapheelement.Node;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 import java.lang.Integer;
+import java.util.SortedMap;
 
 public class RandomLinearGrapheGenerator implements GrapheGenerator {
 
@@ -70,5 +72,8 @@ public class RandomLinearGrapheGenerator implements GrapheGenerator {
 
         return resultGraphe;
     }
+
+
+
 
 }
