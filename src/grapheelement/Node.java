@@ -5,8 +5,7 @@ public class Node {
     public String name;
     public Edge leftEdge;
     public Edge rightEdge;
-    public Edge left;
-    public Edge right;
+
 
     public Color getColor() {
         return color;
@@ -36,13 +35,7 @@ public class Node {
         this.rightEdge = e;
     }
 
-    public Edge getLeft() {
-        return left;
-    }
 
-    public Edge getRight() {
-        return right;
-    }
 
     @Override
     public String toString() {
