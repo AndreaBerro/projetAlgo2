@@ -55,11 +55,16 @@ public class RandomLinearGrapheGenerator implements GrapheGenerator {
             Edge edgeToAdd;
             Color c =  new Random().nextInt(100)<this.probAreteRouge*100 ? Color.ROUGE : Color.BLEU;
 
-            if (new Random().nextInt(100)<this.probAreteVersGauche*100)
-                edgeToAdd = new Edge(resultGraphe.nodes.get(i+1), resultGraphe.nodes.get(i), c);
-            else
-                edgeToAdd = new Edge(resultGraphe.nodes.get(i), resultGraphe.nodes.get(i+1), c);
+            if (new Random().nextInt(100)<this.probAreteVersGauche*100) {
+                edgeToAdd = new Edge(resultGraphe.nodes.get(i + 1), resultGraphe.nodes.get(i), c);
 
+            }
+            else {
+                edgeToAdd = new Edge(resultGraphe.nodes.get(i), resultGraphe.nodes.get(i + 1), c);
+            }
+
+            resultGraphe.nodes.get(i).setRight(edgeToAdd);
+            resultGraphe.nodes.get(i+1).setLeft(edgeToAdd);
             resultGraphe.edges.add(edgeToAdd);
         }
 
