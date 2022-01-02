@@ -9,13 +9,13 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class GrapheSolverB implements GrapheSolver {
+public class GrapheSolverCombine implements GrapheSolver {
     public int[] weight=new int[4];
-    public GrapheSolverB(){
-        weight[0]=10;
+    public GrapheSolverCombine(){
+        weight[0]=15;
         weight[1]=4;
-        weight[2]=13;
-        weight[3]=5;
+        weight[2]=19;
+        weight[3]=4;
     }
     @Override
     public int solve(Graphe g) {

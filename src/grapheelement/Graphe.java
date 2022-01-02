@@ -37,7 +37,10 @@ public class Graphe {
 //    }
     public boolean removeNode(Node node){
         if(!this.nodes.contains(node)){
-            return false;
+            throw new IllegalArgumentException("Le noeud n'existe pas");
+        }
+        if(node.color.equals(Color.BLEU)){
+            throw new IllegalArgumentException("Le noeud est bleu");
         }
         if(node.leftEdge!=null&&node.leftEdge.startingNode==node){
             edges.remove(node.leftEdge);
