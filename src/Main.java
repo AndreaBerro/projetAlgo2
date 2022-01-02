@@ -2,6 +2,8 @@ import grapheelement.Graphe;
 import graphegenerator.GrapheGenerator;
 import graphegenerator.RandomLinearGrapheGenerator;
 import graphesolver.GrapheSolver;
+import graphesolver.GrapheSolverAlgo1;
+import graphesolver.GrapheSolverAlgo2;
 import graphesolver.GrapheSolverB;
 
 /**
@@ -23,17 +25,28 @@ public class Main {
             }
         }
     }
-
+    public static void fixedStats(GrapheSolver gs){
+        int moyAct = 0;
+        GrapheGenerator gg = new RandomLinearGrapheGenerator(0.5f, 0.5f);
+        for (int j2 = 0; j2 < 100; j2++) {
+            Graphe g = gg.generateGraphe();
+            moyAct += gs.solve(g);
+        }
+        moyAct = moyAct / 100;
+        System.out.println(moyAct);
+    }
     public static void main(String[] args) {
         GrapheGenerator generator = new RandomLinearGrapheGenerator(0.5f, 0.5f);
         Graphe graphe = generator.generateGraphe();
         System.out.println(graphe);
         System.out.println("          ");
-//        graphe.removeNode(graphe.nodes.get(10));
-//        System.out.println(graphe);
-//        graphe.nodes.sort((n1, n2) -> n2.importanceB()-n1.importanceB());
+
         GrapheSolverB gsb = new GrapheSolverB();
+        GrapheSolverAlgo1 gsa = new GrapheSolverAlgo1();
+        GrapheSolverAlgo2 gsa2 = new GrapheSolverAlgo2();
+
         createStats(gsb);
+        createStats(gsa);
 
     }
 

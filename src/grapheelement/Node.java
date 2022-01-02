@@ -42,31 +42,34 @@ public class Node {
         return "("+this.name+":"+this.color+")";
     }
 
-    public int importanceB(){
-        if(color == Color.BLEU){
-            return 0;
-        }
-        int i=5;
-        i = getI(i, leftEdge);
-        i = getI(i, rightEdge);
-        return i;
-    }
-
-    private int getI(int i, Edge leftEdge) {
-        if(leftEdge != null){
-            if(leftEdge.isOutEdge(this)){
-                if(leftEdge.color == Color.ROUGE){
-                    i+=10;
-                    if(leftEdge.endingNode.color == Color.BLEU){
-                         i+=5;
-                    }
-                }
-            }else {
-                if(leftEdge.color == Color.BLEU&& leftEdge.startingNode.color == Color.ROUGE){
-                    i+=5;
-                }
-            }
-        }
-        return i;
-    }
+//    public int importanceB(){
+//        if(color == Color.BLEU){
+//            return 0;
+//        }
+//        int i=3;
+//        i = getI(i, leftEdge);
+//        i = getI(i, rightEdge);
+//        return i;
+//    }
+//
+//    private int getI(int i, Edge edge) {
+//        if(edge != null){
+//            if(edge.isOutEdge(this)){
+//                if(edge.color == Color.ROUGE){
+//                    i+=10;
+//                    if(edge.endingNode.color == Color.BLEU){
+//                         i+=4;
+//                    }
+//                }
+//            }else {
+//                if(edge.color == Color.BLEU){
+//                    i+=3;
+//                    if( edge.startingNode.color == Color.ROUGE){
+//                       i+=2;
+//                    }
+//                }
+//            }
+//        }
+//        return i;
+//    }
 }
