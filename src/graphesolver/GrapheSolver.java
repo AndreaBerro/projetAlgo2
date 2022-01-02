@@ -1,7 +1,9 @@
 package graphesolver;
 
+import grapheelement.Graphe;
+
 public interface GrapheSolver {
 
-    public int solve();
+    public int solve(Graphe g);
     
 }
