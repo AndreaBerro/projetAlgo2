@@ -22,6 +22,9 @@ public class Graphe {
                     edgesToRemove.add(edge);
                     edge.endingNode.color = c;
                 }
+                if (edge.endingNode == nodeToRemove) {
+                    edge.endingNode = null;
+                }
             }
             nodes.remove(nodeToRemove);
             for (Edge edge : edgesToRemove) {
